@@ -33,11 +33,10 @@ Maybe! We'll see how the basic one goes.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. The new field added on the Add/Edit Product Page
+2. Note different title and field values
+3. Product Page on Front End with Product Ttitle
+4. Cart Page on Front End with custom field title
 
 == Changelog ==
 

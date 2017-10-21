@@ -54,50 +54,15 @@ class Wc_Cpn_Public {
 
 	}
 
-	/**
-	 * Register the stylesheets for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
+	public function display_cart_poduct_title( $link_text, $product_data ) {
+		$cart_title = get_post_meta( $product_data['product_id'], '_wc_cpn_cart_product_title', true );
+		$cart_title = ( ! empty( $cart_title ) ) ? $cart_title : get_the_title( $product_data['product_id'] );
+		$product_link = get_the_permalink( $product_data['product_id'] );
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Wc_Cpn_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Wc_Cpn_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wc-cpn-public.css', array(), $this->version, 'all' );
-
-	}
-
-	/**
-	 * Register the JavaScript for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Wc_Cpn_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Wc_Cpn_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wc-cpn-public.js', array( 'jquery' ), $this->version, false );
-
+		return sprintf( '<a href="%s">%s </a>', 
+			esc_url( $product_link ),
+			esc_attr( $cart_title )
+		);
 	}
 
 }

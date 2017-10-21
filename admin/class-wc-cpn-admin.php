@@ -54,7 +54,7 @@ class Wc_Cpn_Admin {
 
 	}
 
-	public function wc_cpn_add_cart_title_field() {
+	public function add_cart_title_field() {
 		
 		global $woocommerce, $post;
 
@@ -74,7 +74,7 @@ class Wc_Cpn_Admin {
 
 	}
 
-	public function wc_cpn_add_cart_title_save( $post_id ){
+	public function add_cart_title_save( $post_id ){
 		
 		// Text Field
 		$cart_product_title = $_POST[ '_wc_cpn_cart_product_title' ];

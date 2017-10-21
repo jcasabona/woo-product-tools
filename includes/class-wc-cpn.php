@@ -154,8 +154,8 @@ class Wc_Cpn {
 
 		$plugin_admin = new Wc_Cpn_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'woocommerce_product_options_general_product_data', $plugin_admin, 'wc_cpn_add_cart_title_field' );
-		$this->loader->add_action( 'woocommerce_process_product_meta', $plugin_admin, 'wc_cpn_add_cart_title_save' );
+		$this->loader->add_action( 'woocommerce_product_options_general_product_data', $plugin_admin, 'add_cart_title_field' );
+		$this->loader->add_action( 'woocommerce_process_product_meta', $plugin_admin, 'add_cart_title_save' );
 
 	}
 
@@ -170,9 +170,7 @@ class Wc_Cpn {
 
 		$plugin_public = new Wc_Cpn_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-
+		$this->loader->add_filter( 'woocommerce_cart_item_name', $plugin_public, 'display_cart_poduct_title', 10, 2 );
 	}
 
 	/**

@@ -54,50 +54,33 @@ class Wc_Cpn_Admin {
 
 	}
 
-	/**
-	 * Register the stylesheets for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
+	public function wc_cpn_add_cart_title_field() {
+		
+		global $woocommerce, $post;
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Wc_Cpn_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Wc_Cpn_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+		echo '<div class="wc_cpn_cart_title_field">';
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wc-cpn-admin.css', array(), $this->version, 'all' );
+		woocommerce_wp_text_input( 
+			array( 
+				'id'          => '_wc_cpn_cart_product_title', 
+				'label'       => __( 'Cart Product Title', 'wc-cpn' ), 
+				'placeholder' => '',
+				'desc_tip'    => 'true',
+				'description' => __( 'This will show up only on the cart page.', 'wc-cpn' ) 
+			)
+		);
+
+		echo '</div>';
 
 	}
 
-	/**
-	 * Register the JavaScript for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Wc_Cpn_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Wc_Cpn_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wc-cpn-admin.js', array( 'jquery' ), $this->version, false );
-
+	public function wc_cpn_add_cart_title_save( $post_id ){
+		
+		// Text Field
+		$cart_product_title = $_POST[ '_wc_cpn_cart_product_title' ];
+		if ( ! empty( $cart_product_title ) ) {
+			update_post_meta( $post_id, '_wc_cpn_cart_product_title', esc_attr( $cart_product_title ) );
+		}
 	}
 
 }

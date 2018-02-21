@@ -2,3 +2,5 @@ theme: jekyll-theme-cayman
 title: Woo Product Cart Title
 twitter_username: jcasabona
 github_username:  jcasabona
+github:
+repo: https://github.com/jcasabona/woocommerce-product-cart-title/

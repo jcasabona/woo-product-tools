@@ -16,7 +16,7 @@
  * Plugin Name:       WooCommerce Cart Product Title
  * Plugin URI:        https://github.com/jcasabona/woocommerce-product-cart-title/
  * Description:      This is a simple plugin for WooCommerce that will change the product title in the cart to help prevent cart abandonment.
- * Version:           0.5
+ * Version:           0.6
  * Author:            Joe Casabona
  * Author URI:        https://casabona.org
  * License:           GPL-2.0+
@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'PLUGIN_NAME_VERSION', '0.5' );
+define( 'PLUGIN_NAME_VERSION', '0.6' );
 
 /**
  * The code that runs during plugin activation.

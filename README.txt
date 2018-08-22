@@ -40,5 +40,8 @@ Maybe! We'll see how the basic one goes.
 
 == Changelog ==
 
+= 0.6 = 
+Added support for a custom Thank You page on a per-product level, that can be any URL.
+
 = 0.5 =
 The first version! Wooo.

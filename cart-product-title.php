@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'PLUGIN_NAME_VERSION', '0.6' );
+define( 'PLUGIN_NAME_VERSION', '0.5' );
 
 /**
  * The code that runs during plugin activation.

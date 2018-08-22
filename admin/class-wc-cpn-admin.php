@@ -72,20 +72,6 @@ class Wc_Cpn_Admin {
 
 		echo '</div>';
 
-		echo '<div class="wc_cpn_thank_you_field">';
-
-		woocommerce_wp_text_input( 
-			array( 
-				'id'          => '_wc_cpn_thank_you_page', 
-				'label'       => __( 'Thank You Page', 'wc-cpn' ), 
-				'placeholder' => '',
-				'desc_tip'    => 'true',
-				'description' => __( 'This is where users will be redirected after they purchase.', 'wc-cpn' ) 
-			)
-		);
-
-		echo '</div>';
-
 	}
 
 	public function add_cart_title_save( $post_id ){
@@ -95,9 +81,6 @@ class Wc_Cpn_Admin {
 		if ( ! empty( $cart_product_title ) ) {
 			update_post_meta( $post_id, '_wc_cpn_cart_product_title', esc_attr( $cart_product_title ) );
 		}
-
-		$thank_you_page = $_POST[ '_wc_cpn_thank_you_page' ];
-		update_post_meta( $post_id, '_wc_cpn_thank_you_page', esc_url( $thank_you_page ) );
 	}
 
 }

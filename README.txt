@@ -3,7 +3,6 @@ Contributors: jcasabona
 Donate link: https://casabona.org/coffee/
 Tags: woocommerce, cart, churn, abandonment
 Requires at least: 3.0.1
-Tested up to: 3.4
 Stable tag: 0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html

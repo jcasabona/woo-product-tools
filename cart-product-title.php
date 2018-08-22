@@ -13,10 +13,10 @@
  * @package           Wc_Cpn
  *
  * @wordpress-plugin
- * Plugin Name:       WooCommerce Cart Product Title
- * Plugin URI:        https://github.com/jcasabona/woocommerce-product-cart-title/
+ * Plugin Name:       Woo Product Tools
+ * Plugin URI:        https://github.com/jcasabona/woo-product-tools/
  * Description:      This is a simple plugin for WooCommerce that will change the product title in the cart to help prevent cart abandonment.
- * Version:           0.6
+ * Version:           0.7
  * Author:            Joe Casabona
  * Author URI:        https://casabona.org
  * License:           GPL-2.0+

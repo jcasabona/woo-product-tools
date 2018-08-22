@@ -1,10 +1,9 @@
 === Plugin Name ===
 Contributors: jcasabona
-Donate link: https://casabona.org
+Donate link: https://casabona.org/coffee/
 Tags: woocommerce, cart, churn, abandonment
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 0.5
+Stable tag: 0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,9 +11,9 @@ This is a simple plugin for WooCommerce that will change the product title in th
 
 == Description ==
 
-This is a simple plugin for WooCommerce that will change the product title in the cart to help prevent cart abandonment. The idea is that once a user gets to the cart page, viewing only the product title without any of the benefits makes it less likely for them to click the buy button. 
+This started off as a simple plugin for WooCommerce that would change the product title in the cart to help prevent cart abandonment. The idea is that once a user gets to the cart page, viewing only the product title without any of the benefits makes it less likely for them to click the buy button. 
 
-This plugin adds a single metabox to the product pages called "Cart Title." Here you can add a new title that show the benefits of your product, right in the cart.
+It's currently being developed into a small suite of tools to improve single product management in WooCommerce.
 
 == Installation ==
 
@@ -39,6 +38,9 @@ Maybe! We'll see how the basic one goes.
 4. Cart Page on Front End with custom field title
 
 == Changelog ==
+
+= 0.7 =
+Changed name to Woo Product Tools
 
 = 0.6 = 
 Added support for a custom Thank You page on a per-product level, that can be any URL.

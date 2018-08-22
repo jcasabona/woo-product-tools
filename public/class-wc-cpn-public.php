@@ -65,20 +65,4 @@ class Wc_Cpn_Public {
 		);
 	}
 
-	public function redirect_thank_you( $order_id ) {
-		global $wp;
-
-		$order = wc_get_order( $order_id );
-
-		$items = $order->get_items(); 
-		$item = array_pop( $items );
-
-		$thank_you_page = get_post_meta(  $item->get_product_id(), '_wc_cpn_thank_you_page', true );
-
-		if ( is_checkout() && ! empty( $wp->query_vars['order-received'] ) && ! empty( $thank_you_page ) ) {
-			wp_redirect( $thank_you_page );
-			exit;
-		}
-	}
-
 }

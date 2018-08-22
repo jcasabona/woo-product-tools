@@ -171,6 +171,7 @@ class Wc_Cpn {
 		$plugin_public = new Wc_Cpn_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_filter( 'woocommerce_cart_item_name', $plugin_public, 'display_cart_poduct_title', 10, 2 );
+		$this->loader->add_action( 'woocommerce_thankyou', $plugin_public, 'redirect_thank_you' );
 	}
 
 	/**
